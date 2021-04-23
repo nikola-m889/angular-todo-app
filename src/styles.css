@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 19px;
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: rgb(164, 34, 195);
+  background-image: linear-gradient(
+    to right top,
+    #dc9131,
+    #f46c47,
+    #fa4370,
+    #e330a3,
+    #a448d5
+  );
+}

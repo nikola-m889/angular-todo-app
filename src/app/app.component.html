@@ -1,0 +1,40 @@
+<!--
+<input type="text" [(ngModel)]="TodoElement" />
+<button (click)="addTodo()">Add todo</button>
+
+<div class="todo">
+  <div *ngFor="let todo of TodoList">
+    <div>{{ todo.name }}</div>
+    <div>{{ todo.priority }}</div>
+    <div>{{ todo.completed }}</div>
+  </div>
+</div>
+
+-->
+
+<div class="container">
+  <input type="text" [(ngModel)]="TodoElement" />
+  <button class="btn-add" (click)="addTodo()">Add task</button>
+
+  <table class="todo-table">
+    <tr class="th-table">
+      <th>Name</th>
+      <th>Priority</th>
+      <th>Completed</th>
+    </tr>
+
+    <tr class="table-rows" *ngFor="let todo of TodoList">
+      <td>{{ todo.name }}</td>
+      <td>{{ todo.priority }}</td>
+      <td>{{ todo.completed }}</td>
+      <td>
+        <button class="edit" (click)="todoCompleted(todo)">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
+        <button (click)="deleteTodo(todo)">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
